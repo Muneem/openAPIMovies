@@ -23,7 +23,8 @@ const HomeScreen = () => {
     useEffect(() => {
         async function fetchRandomMovies() {
             try {
-                const response = await axios.get('https://search.imdbot.workers.dev');
+                // TODO API returns too many request so i have hardcoded response here
+                const response = await axios.get('https://search.imdbot.workers.dev/?q=inception');
                 if(response && response.data.results) {
                     setRandomMovies(response.data.results);
                 }
