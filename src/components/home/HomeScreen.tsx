@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import {mockMovies} from "../mockData";
+import {mockMovies} from "../../mockData";
 import './HomeScreen.css';
-import MovieCard from "./MovieCard";
+import MovieCard from "../movie-card/MovieCard";
 
 
 interface Movie {

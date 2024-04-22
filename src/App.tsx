@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomeScreen from './components/HomeScreen';
-import MovieDetailsScreen from './components/MovieDetailsScreen';
-import SearchResults from './components/SearchResults';
-import SearchBar from './components/SearchBar';
+import Navbar from './components/navbar/Navbar';
+import HomeScreen from './components/home/HomeScreen';
+import MovieDetailsScreen from './components/movie-detail/MovieDetailsScreen';
+import SearchResults from './components/search-result/SearchResults';
+import SearchBar from './components/search-bar/SearchBar';
 import './App.css'
 
 const App: React.FC = () => {

@@ -2,9 +2,9 @@
 
 import React, {useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
-import MovieCard from './MovieCard';
-import {mockMovies} from "../mockData";
-import NoResultsFound from "./NoResultsFound";
+import MovieCard from '../movie-card/MovieCard';
+import {mockMovies} from "../../mockData";
+import NoResultsFound from "../no-result-found/NoResultsFound";
 
 interface Movie {
     id: string;
