@@ -1,0 +1,33 @@
+/* src/components/MovieCard.css */
+
+.movie-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto; /* Ensure whole image fits within the container */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+}
+
+.movie-title {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}

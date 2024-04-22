@@ -2,15 +2,12 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar: React.FC = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-            </ul>
+        <nav className="navbar">
+            <Link to="/" className="navbar-logo">Movie App</Link> {/* Added className */}
         </nav>
     );
 };

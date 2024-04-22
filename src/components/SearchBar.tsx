@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './SearchBar.css';
 
 const SearchBar: React.FC = () => {
     const [query, setQuery] = useState('');
@@ -17,9 +17,15 @@ const SearchBar: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={query} onChange={handleChange} placeholder="Search for movies..." />
-            <button type="submit">Search</button>
+        <form onSubmit={handleSubmit} className="search-form"> {/* Added className */}
+            <input
+                type="text"
+                value={query}
+                onChange={handleChange}
+                placeholder="Search for movies..."
+                className="search-input"
+            />
+            <button type="submit" className="search-button">Search</button>
         </form>
     );
 };

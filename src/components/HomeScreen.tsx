@@ -4,6 +4,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import {mockMovies} from "../mockData";
+import './HomeScreen.css';
+import MovieCard from "./MovieCard";
+
 
 interface Movie {
     id: string;
@@ -20,8 +23,14 @@ const HomeScreen = () => {
     useEffect(() => {
         async function fetchRandomMovies() {
             try {
-                const response = await axios.get('https://search.imdbot.workers.dev/');
-                setRandomMovies(response.data.results);
+                const response = await axios.get('https://search.imdbot.workers.dev');
+                if(response && response.data.results) {
+                    setRandomMovies(response.data.results);
+                }
+                else {
+                    setRandomMovies(mockResponse.results);
+                }
+
             } catch (error) {
                 console.error('Error fetching random movies:', error);
                 setRandomMovies(mockResponse.results);
@@ -32,16 +41,11 @@ const HomeScreen = () => {
     }, []);
 
     return (
-        <div>
+        <div className="homescreen">
             <h1>Random Movies</h1>
             <div className="movie-list">
                 {randomMovies.map((movie) => (
-                    <div key={movie.id} className="movie-card">
-                        <Link to={`/movie/${movie.id}`}>
-                            <img src={movie.poster} alt={movie.title} />
-                            <h3>{movie.title}</h3>
-                        </Link>
-                    </div>
+                    <MovieCard key={movie.id} id={movie.id} title={movie.title} poster={movie.poster}/>
                 ))}
             </div>
         </div>

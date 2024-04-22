@@ -1,0 +1,33 @@
+/* src/components/MovieDetailsScreen.css */
+
+.movie-details {
+    padding: 20px;
+
+}
+
+.movie-detail-poster {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details h2 {
+    text-align: center;
+}
+
+.movie-details p {
+    text-align: justify;
+}
+
+.movie-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.movie-details li {
+    margin-bottom: 10px;
+}

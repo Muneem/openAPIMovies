@@ -1,0 +1,15 @@
+/* src/components/NoResultsFound.css */
+
+.no-results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.no-results p {
+    color: #666;
+}
